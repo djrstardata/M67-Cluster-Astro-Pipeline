@@ -1,0 +1,18 @@
+# Python缓存文件
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.env/
+.venv/
+
+# 天文FITS大图像（不上传原始观测数据）
+*.fits
+*.fits.bz2
+*.fit
+*.fts
+
+# 临时输出图片、数组文件
+*.png
+*.jpg
+*.npy

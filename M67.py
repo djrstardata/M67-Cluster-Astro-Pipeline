@@ -41,8 +41,8 @@ plt.colorbar(label="Normalized Value")
 
 #第三张，扣除天光背景的图像进行Astropy反双曲正弦拉伸后的图像
 plt.subplot(1,3,3)
-norm=asinh=ImageNormalize(image_sub,interval=interval,stetch=AsinhStretch(a=0.1))
-plt.imshow(image_sub,cmap="gray",origin("lower"),norm=norm_asinh)
+norm—_asinh=ImageNormalize(image_sub,interval=interval,stretch=AsinhStretch(a=0.1))
+plt.imshow(image_sub,cmap="gray",origin="lower",norm=norm_asinh)
 plt.title("Astropy AsinhStretch Image")
 plt.colorbar(label="Normalized Value")
 

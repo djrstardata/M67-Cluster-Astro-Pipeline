@@ -27,22 +27,22 @@ plt.figure(figsize=(18,6))                                                      
 
 #第一张，线性拉伸图像
 plt.subplot(1,3,1)
-plt.imshow(image_data,cmap="gray",origin="lower")                                                           #灰白色，坐标设置在左下角
+plt.imshow(image_sub,cmap="gray",origin="lower")                                                           #灰白色，坐标设置在左下角
 plt.title("Linear Stretch Image")
 plt.colorbar(label="Flux")
 
 #第二张，Astropy对数拉伸图像
 plt.subplot(1,3,2)
 interval=ZScaleInterval()
-norm_log=ImageNormalize(image_data,interval=interval,stretch=LogStretch())
-plt.imshow(image_data,cmap="gray",origin="lower",norm=norm_log)
+norm_log=ImageNormalize(image_sub,interval=interval,stretch=LogStretch())
+plt.imshow(image_sub,cmap="gray",origin="lower",norm=norm_log)
 plt.title("Astropy Stretch Image")
 plt.colorbar(label="Normalized Value")
 
 #第三张，Astropy反双曲正弦拉伸图像
 plt.subplot(1,3,3)
-norm=asinh=ImageNormalize(image_data,interval=interval,stetch=AsinhStretch(a=0.1))
-plt.imshow(image_data,cmap="gray",origin("lower"),norm=norm_asinh)
+norm=asinh=ImageNormalize(image_sub,interval=interval,stetch=AsinhStretch(a=0.1))
+plt.imshow(image_sub,cmap="gray",origin("lower"),norm=norm_asinh)
 plt.title("Astropy AsinhStretch Image")
 plt.colorbar(label="Normalized Value")
 
